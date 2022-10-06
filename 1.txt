@@ -1,1 +1,4 @@
-abc
+{
+  name:'chp',
+  age:20
+}
