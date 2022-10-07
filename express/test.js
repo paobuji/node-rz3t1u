@@ -3,6 +3,7 @@ const express = require('express');
 const app = express();
 
 app.get('/get', (req, res) => {
+  //这是路由直接挂载到app实例上
   res.send('hello get');
 });
 
@@ -11,7 +12,7 @@ app.get('/getlist/:id', (req, res) => {
   console.log('req', req.params);
 });
 
-app.use(express.static('../public')); //托管静态资源
+app.use('/public', express.static('../public')); //托管静态资源
 
 app.listen('8081', () => {
   console.log('成功创建了express');
