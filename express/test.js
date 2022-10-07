@@ -2,9 +2,9 @@ const express = require('express');
 
 const app = express();
 
-app.get('/get', (req, res) => {
+app.get('/', (req, res) => {
   //这是路由直接挂载到app实例上
-  res.send('hello get');
+  res.send('hello express');
 });
 
 app.get('/getlist/:id', (req, res) => {
