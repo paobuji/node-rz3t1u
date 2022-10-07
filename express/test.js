@@ -4,7 +4,7 @@ const app = express();
 
 app.get('/', (req, res) => {
   //这是路由直接挂载到app实例上
-  res.send('hello express');
+  res.send('hello express!');
 });
 
 app.get('/getlist/:id', (req, res) => {
