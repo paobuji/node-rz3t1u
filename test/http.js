@@ -10,7 +10,7 @@ var server = http.createServer((req, res) => {
   // 将HTTP响应200写入res, 同时设置Content-Type: text/html:
   res.writeHead(200, { 'Content-Type': 'text/html;charset=utf-8' });
   // 将HTTP响应的HTML内容写入res:
-  const fpath = path.join(__dirname, '/1.html');
+  const fpath = path.join(__dirname, '/1.txt');
   fs.readFile(fpath, 'utf-8', (err, data) => {
     if (err) {
       return err;
